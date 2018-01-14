@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="indigo">
+      <div class="nav-wrapper container-flex-row jc-between">
+        <!-- <a href="#" class="material-icons left space">menu</a>
+        <a href="#" class="brand-logo">Noticias</a>
+        <a href="#" class="material-icons right space" id="write">create</a> -->
+        <!-- Tabs -->
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3">
+                <a href="#test1">Test 1</a>
+              </li>
+              <li class="tab col s3">
+                <a class="active" href="#test2">Test 2</a>
+              </li>
+              <li class="tab col s3">
+                <a href="#test3">Tab</a>
+              </li>
+              <li class="tab col s3">
+                <a href="#test4">Test 4</a>
+              </li>
+              <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+              </a>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li>
+                <a href="">Editar perfil</a>
+              </li>
+              <li>
+                <a href="">Salir</a>
+              </li>
+            </ul>
+            <!-- <a href="#" class="button-collapse">
+              <i class="material-icons">menu</i>
+            </a> -->
+          </div>
+         
+    </nav>
+  </div>
+  
+  <div id="test1" class="col s12">Test 1</div>
+  <div id="test2" class="col s12">Test 2</div>
+  <div id="test3" class="col s12">Test 3</div>
+  <div id="test4" class="col s12">Test 4
+    <div id="name"></div>
+  </div>
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/newsfeed.js"></script>
+</body>
+</html>
