@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <!-- <div id="name">
+
+  </div> -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down tabs tabs-transparent">
+        <li class="tab">
+          <a href="#newsfeed">Inicio</a>
+        </li>
+        <li class="tab">
+          <a href="#search">Buscar</a>
+        </li>
+        <li class="tab">
+          <a href="#message">Mensajes</a>
+        </li>
+        <li class="tab">
+          <a href="#profile">Perfil</a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <a href="#profile">Editar Perfil</a>
+        </li>
+        <li>
+          <a href="../index.html">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-content hide-on-large-only">
+      <ul class="tabs tabs-transparent">
+        <li class="tab">
+          <a href="#newsfeed" class="material-icons active">home</a>
+        </li>
+        <li class="tab">
+          <a href="#search" class="material-icons">search</a>
+        </li>
+        <li class="tab">
+          <a href="#message" class="material-icons">message</a>
+        </li>
+        <li class="tab">
+          <a href="#profile" class="material-icons">person</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NEWSFEED -->
+  <section id="newsfeed">
+    <!-- Header -->
+    <div class="" id="post-box">
+      <div class="container">
+        <div class="row">
+          <form class="col s12 ">
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="¿Qué quieres compartir?" type="text" class="validate text-post">
+                <label for="post"></label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <label> Sube una foto </label>
+              </div>
+              <div class="file-field input-field col s12">
+                <div class="btn">
+                  <span></span>
+                  <span>
+                    <a href="#" class="material-icons camera">camera_alt</a>
+                  </span>
+                  <input type="file" accept="image/*" class="select-img" />
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate img-info" type="text" placeholder="Upload file" />
+                </div>
+              </div>
+            </div>
+            <a id="send" class="btn btn-submit" disabled>Publicar</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="container">
+      <div class="content col s12">
+      </div>
+      <div class="info">
+      </div>
+    </div>
+  </section>
+  <!-- SEARCH -->
+  <section id="search">
+    <!-- Input -->
+    <h5 class="center-align">Quiero practicar...</h5>
+    <div class="input-field col s12">
+      <select>
+        <option value="0" disabled selected>Elige un idioma</option>
+        <option value="1" data-icon="../assets/icon/United.png">Inglés</option>
+        <option value="2" data-icon="../assets/icon/France.png">Francés</option>
+        <option value="3" data-icon="../assets/icon/Italy.png">Italiano</option>
+      </select>
+    </div>
+    <!-- Container friends -->
+    <div id="container-friends" class="friend-box">
+      <!-- Modal Trigger -->
+      <div id="user" href="#modal1" data-target="modal1" class="modal-trigger">
+      </div>
+    </div>
+    
+  </section>
+  <!-- MESSAGE -->
+  <section id="message">
+    <ul class="collection">
+      <li class="collection-item avatar">
+        <img src="../assets/images/john.jpg" alt="" class="circle">
+        <span class="title">John</span>
+        <p>What's up? Having a good weekend?
+          <br> 05:00 pm
+        </p>
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">check</i>
+        </a>
+      </li>
+      <li class="collection-item avatar">
+        <img src="../assets/images/gordon.jpg" alt="" class="circle">
+        <span class="title">Gordon</span>
+        <p>How is eveything going lately?
+          <br> 07:00 pm
+        </p>
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">check</i>
+        </a>
+      </li>
+      <li class="collection-item avatar">
+        <img src="../assets/images/mayra.jpg" alt="" class="circle">
+        <span class="title">Mayra</span>
+        <p>Hey I see you have nice pictures in your profile. Wanna talk?
+          <br> 03:00 pm
+        </p>
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">check</i>
+        </a>
+      </li>
+      <li class="collection-item avatar">
+        <img src="../assets/images/martin.jpg" alt="" class="circle">
+        <span class="title">Martin</span>
+        <p>I'd like to learn more about your culture since I'm planning to go there for vacations.
+          <br> 08:00 pm
+        </p>
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">check</i>
+        </a>
+      </li>
+      <li class="collection-item avatar">
+        <img src="../assets/images/mery.jpg" alt="" class="circle">
+        <span class="title">Mery</span>
+        <p>Hi! How are your classes going? Did you submit your final project?
+          <br> 09:00 pm
+        </p>
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">check</i>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- PROFILE -->
+  <section id="profile">
+    <!-- Content -->
+    <div id="content" class="content data-form">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="photo container-flex-row">
+              <img src="../assets/images/user.svg" alt="Foto">
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col s12 center-align">
+            <a class="waves-effect waves-light btn">
+              <i class="fa fa-camera white-text" aria-hidden="true"></i> + Profile picture</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col offset-s1 s10">
+            <div class="biography">
+              <div class="input-field">
+                <textarea id="textarea1" class="materialize-textarea" data-length="150" maxlength="150" placeholder="Soy... Quiero aprender..."></textarea>
+                <label for="textarea1">Sobre mí</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col offset-s1 s10">
+            <div class="information">
+              <div class="sex">
+                <div class="input-field">
+                  <select>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                  </select>
+                  <label>Sexo</label>
+                </div>
+              </div>
+              <div class="birthday">
+                <div class="input-field">
+                  <input placeholder="dd/mm/aaaa" id="birthday" type="text" class="validate">
+                  <label>Cumpleaños</label>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="col offset-s1 s10">
+            <div class="language">
+              <div id="language1">
+                <div class="input-field">
+                  <select>
+                    <option value="" disabled selected>Elige tu idioma nativo</option>
+                    <option value="1">Español</option>
+                    <option value="2">Inglés</option>
+                  </select>
+                  <label>Mi idioma nativo</label>
+                </div>
+              </div>
+              <div id="language2">
+                <div class="input-field">
+                  <select>
+                    <option value="" disabled selected>Elige el idioma a aprender</option>
+                    <option value="1">Francés</option>
+                    <option value="2">Italiano</option>
+                  </select>
+                  <label>Quiero aprender</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <!-- Contenido post que hizo el usuario en newsfeed-->
+    <div class="container">
+      <div class="info">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Speakfriend</h4>
+      <p>Información</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Seguir</a>
+    </div>
+  </div>
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/newsfeed.js"></script>
+  <script src="../js/search.js"></script>
+  
+</body>
+</html>

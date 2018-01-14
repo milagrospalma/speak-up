@@ -19,26 +19,12 @@ $('#login').on('click', function () {
     window.localStorage.setItem('name', result.user.displayName);
     // Guardando el UID en el localstorage
     var name = window.localStorage.getItem('name');
+    window.localStorage.setItem('photo', result.user.photoURL);
+    var img = window.localStorage.getItem('photo');
+
     console.log(name);
   });
 });
-
-// $('#root').append('<h3>' + result.user.displayName + '</h3>');
-
-var info;
-function nueva(result) {
-
-  save(result.user);
-  info = $('#name').append('<h3>' + result.user.displayName + '</h3>');
-
-  console.log(result.user.displayName);
-  // $('#name').append('<p>HOLAAAA</p>');
-
-  // $('#login').hide();
-  // $('#root').append('<h3>' + result.user.displayName + '</h3>');
-  // $('#root').append('<img src="' + result.user.photoURL + '"/>');
-  // $('#name').append('<h3>' + result.user.displayName + '</h3>');
-};
 
 // Función para guardar automáticamente
 function save(user) {
@@ -51,14 +37,6 @@ function save(user) {
   
   firebase.database().ref("test/" + user.uid).set(usuario);
 };
-
-// Evento para crear la base de datos
-// $('#save').on('click', function() {
-//     firebase.database().ref("test").set({
-//         name: "Milagros",
-//         age: 11
-//     })
-// });
 
 // Leyendo de la BD
 // firebase.database().ref('telmex').on('child_added', function (event) {

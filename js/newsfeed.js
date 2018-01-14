@@ -1,33 +1,58 @@
 $(document).ready(function() {
-  // var config = {
-  //   apiKey: "AIzaSyDaTFJ4z6OfAoyPTbUeqkqS19q0oY3TLtE",
-  //   authDomain: "speakup-e117d.firebaseapp.com",
-  //   databaseURL: "https://speakup-e117d.firebaseio.com",
-  //   projectId: "speakup-e117d",
-  //   storageBucket: "speakup-e117d.appspot.com",
-  //   messagingSenderId: "82772654165"
-  // };
-  // firebase.initializeApp(config);
-
-  // Leyendo de la BD
-  // firebase.database().ref('telmex').on('child_added', function (event) {
-  //   var eventValue = event.val();
-  //   console.log(eventValue);
-  //   $('#name').append('<img src="' + eventValue.photo + '"/>');
-  // });
-
+  // Inicializando componentes de materialize
   $(".button-collapse").sideNav();
-  // $('#name').append('<p>HOLAAAA</p>');
+
+  var $write = $('#write');
+  var $textarea = $('.text-post');
+  var content = $('.content');
+  // var date = moment().format('L');
+  var select = $('.select-img');
+  var image;
+
+  $('.info').append(localStorage.post);
+
+  // event to write a post
+  $write.on('click', function(e) { 
+    $('#post-box').toggleClass('hide');
+    $('#upload').toggleClass('hide');
+  });
+
+  // event to activate the buttton
+  $textarea.on('input', function(event) {
+    if ($(this).val().length > 0) {
+      $('#send').attr('disabled', false);
+    } else {
+      $('#send').attr('disabled', true);
+    }
+  });
+
+  // submitting a post
+  $('#send').on('click', function(e) {
+    event.preventDefault(e);
+    var time = moment().format('LT');
+    var info = $textarea.val();
+    content.prepend('<div id="post" class="border z-depth-2">' + info + '<div class = "center-align"> <img src="" id="picture" alt="" class="hide" width= 220px;></div><div class= "right-align">' + time + '</div> </div>');
+    $textarea.val('');
+    $('.img-info').val('');
+    $('#picture').prepend('#post');        
+    $('#picture').attr('src', image);
+    $('#picture').removeClass('hide');
+    image = '';
+    localStorage.post = content.html();
+    $('#send').attr('disabled', true);     
+  });
+
+  // event to select an image  
+  $('.select-img').change(function() {
+    if (this.files && this.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        image = e.target.result;   
+        $('#send').attr('disabled', false);     
+      };
+      reader.readAsDataURL(this.files[0]);
+    }
+  });
+  $('#profile').append('<h3>' + localStorage.name + '</h3>');
+  $('#profile').append('<img src="' + localStorage.photo + '">');
 });
-$('#name').append('<h3>' + localStorage.name + '</h3>');
-
-console.log('hola');
-
-// document.getElementById('save').addEventListener('click', function () {
-//   document.getElementById('name').textContent = "Holaaa";
-
-// });
-
-// document.getElementById("myBtn").addEventListener("click", function () {
-//   document.getElementById("demo").innerHTML = "Hello World";
-// });
