@@ -4,268 +4,483 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <title>Speak Up</title>
+  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" href="assets/icons/speakup.ico">
 </head>
-<body>
-
-  <!-- <div id="name">
-
-  </div> -->
-  <nav class="nav-extended">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse">
-        <i class="material-icons">menu</i>
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down tabs tabs-transparent">
-        <li class="tab">
-          <a href="#newsfeed">Inicio</a>
-        </li>
-        <li class="tab">
-          <a href="#search">Buscar</a>
-        </li>
-        <li class="tab">
-          <a href="#message">Mensajes</a>
-        </li>
-        <li class="tab">
-          <a href="#profile">Perfil</a>
-        </li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li>
-          <a href="#profile">Editar Perfil</a>
-        </li>
-        <li>
-          <a href="../index.html">Cerrar Sesión</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-content hide-on-large-only">
-      <ul class="tabs tabs-transparent">
-        <li class="tab">
-          <a href="#newsfeed" class="material-icons active">home</a>
-        </li>
-        <li class="tab">
-          <a href="#search" class="material-icons">search</a>
-        </li>
-        <li class="tab">
-          <a href="#message" class="material-icons">message</a>
-        </li>
-        <li class="tab">
-          <a href="#profile" class="material-icons">person</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- NEWSFEED -->
-  <section id="newsfeed">
-    <!-- Header -->
-    <div class="" id="post-box">
-      <div class="container">
-        <div class="row">
-          <form class="col s12 ">
-            <div class="row">
-              <div class="input-field col s12">
-                <input placeholder="¿Qué quieres compartir?" type="text" class="validate text-post">
-                <label for="post"></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <label> Sube una foto </label>
-              </div>
-              <div class="file-field input-field col s12">
-                <div class="btn">
-                  <span></span>
-                  <span>
-                    <a href="#" class="material-icons camera">camera_alt</a>
-                  </span>
-                  <input type="file" accept="image/*" class="select-img" />
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate img-info" type="text" placeholder="Upload file" />
+<body class="vh100">
+  <main>
+    <!-- NAVBAR -->
+    <!-- <div class="navbar-fixed"> -->
+      <nav class="nav-extended indigo">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Speak Up!</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down tabs tabs-transparent">
+            <li class="tab">
+              <a href="#newsfeed">Inicio</a>
+            </li>
+            <li class="tab">
+              <a href="#search">Buscar</a>
+            </li>
+            <li class="tab">
+              <a href="#message">Mensajes</a>
+            </li>
+            <li class="tab">
+              <a href="#profile">Perfil</a>
+            </li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <a href="#profile">Editar Perfil</a>
+            </li>
+            <li>
+              <a href="../index.html">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+        <!-- MENÚ MOBILE -->
+        <div class="nav-content hide-on-large-only navbar-fixed navbar-down">
+          <ul class="tabs tabs-transparent">
+            <li class="tab">
+              <a href="#newsfeed" class="material-icons active">home</a>
+            </li>
+            <li class="tab">
+              <a href="#search" class="material-icons">search</a>
+            </li>
+            <li class="tab">
+              <a href="#message" class="material-icons">message</a>
+            </li>
+            <li class="tab">
+              <a href="#profile" class="material-icons">person</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- </div> -->
+    <!-- NEWSFEED -->
+    <section id="newsfeed">
+      <!-- Header -->
+      <div class="" id="post-box">
+        <div class="container">
+          <div class="row">
+            <form class="col s12 ">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="¿Qué quieres compartir?" type="text" class="validate text-post">
+                  <label for="post"></label>
                 </div>
               </div>
-            </div>
-            <a id="send" class="btn btn-submit" disabled>Publicar</a>
-          </form>
+              <div class="row">
+                <div class="col s12">
+                  <label> Sube una foto </label>
+                </div>
+                <div class="file-field input-field col s12">
+                  <div class="btn">
+                    <span></span>
+                    <span>
+                      <a href="#" class="material-icons camera">camera_alt</a>
+                    </span>
+                    <input type="file" accept="image/*" class="select-img" />
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate img-info" type="text" placeholder="Upload file" />
+                  </div>
+                </div>
+              </div>
+              <a id="send" class="btn btn-submit" disabled>Publicar</a>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Content -->
-    <div class="container">
-      <div class="content col s12">
+      <!-- Content -->
+      <div class="container">
+        <div class="content col s12">
+        </div>
+        <div class="info">
+        </div>
       </div>
-      <div class="info">
+    </section>
+    <!-- SEARCH -->
+    <section id="search">
+      <!-- Input -->
+      <h5 class="center-align">Quiero practicar...</h5>
+      <div class="input-field col s12">
+        <select>
+          <option value="0" disabled selected>Elige un idioma</option>
+          <option value="1" data-icon="../assets/icons/United.png">Inglés</option>
+          <option value="2" data-icon="../assets/icons/France.png">Francés</option>
+          <option value="3" data-icon="../assets/icons/Italy.png">Italiano</option>
+        </select>
       </div>
-    </div>
-  </section>
-  <!-- SEARCH -->
-  <section id="search">
-    <!-- Input -->
-    <h5 class="center-align">Quiero practicar...</h5>
-    <div class="input-field col s12">
-      <select>
-        <option value="0" disabled selected>Elige un idioma</option>
-        <option value="1" data-icon="../assets/icon/United.png">Inglés</option>
-        <option value="2" data-icon="../assets/icon/France.png">Francés</option>
-        <option value="3" data-icon="../assets/icon/Italy.png">Italiano</option>
-      </select>
-    </div>
-    <!-- Container friends -->
-    <div id="container-friends" class="friend-box">
-      <!-- Modal Trigger -->
-      <div id="user" href="#modal1" data-target="modal1" class="modal-trigger">
+      <!-- Container friends -->
+      <div id="container-friends" class="friend-box">
+        <!-- Modal Trigger -->
+        <div id="user" href="#modal1" data-target="modal1" class="modal-trigger">
+        </div>
       </div>
-    </div>
     
-  </section>
-  <!-- MESSAGE -->
-  <section id="message">
-    <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="../assets/images/john.jpg" alt="" class="circle">
-        <span class="title">John</span>
-        <p>What's up? Having a good weekend?
-          <br> 05:00 pm
-        </p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">check</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="../assets/images/gordon.jpg" alt="" class="circle">
-        <span class="title">Gordon</span>
-        <p>How is eveything going lately?
-          <br> 07:00 pm
-        </p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">check</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="../assets/images/mayra.jpg" alt="" class="circle">
-        <span class="title">Mayra</span>
-        <p>Hey I see you have nice pictures in your profile. Wanna talk?
-          <br> 03:00 pm
-        </p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">check</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="../assets/images/martin.jpg" alt="" class="circle">
-        <span class="title">Martin</span>
-        <p>I'd like to learn more about your culture since I'm planning to go there for vacations.
-          <br> 08:00 pm
-        </p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">check</i>
-        </a>
-      </li>
-      <li class="collection-item avatar">
-        <img src="../assets/images/mery.jpg" alt="" class="circle">
-        <span class="title">Mery</span>
-        <p>Hi! How are your classes going? Did you submit your final project?
-          <br> 09:00 pm
-        </p>
-        <a href="#!" class="secondary-content">
-          <i class="material-icons">check</i>
-        </a>
-      </li>
-    </ul>
-  </section>
-  <!-- PROFILE -->
-  <section id="profile">
-    <!-- Content -->
-    <div id="content" class="content data-form">
+    </section>
+    <!-- MESSAGE -->
+    <section id="message">
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="../assets/images/john.jpg" alt="" class="circle">
+          <span class="title">John</span>
+          <p>What's up? Having a good weekend?
+            <br> 05:00 pm
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">check</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../assets/images/gordon.jpg" alt="" class="circle">
+          <span class="title">Gordon</span>
+          <p>How is eveything going lately?
+            <br> 07:00 pm
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">check</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../assets/images/mayra.jpg" alt="" class="circle">
+          <span class="title">Mayra</span>
+          <p>Hey I see you have nice pictures in your profile. Wanna talk?
+            <br> 03:00 pm
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">check</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../assets/images/martin.jpg" alt="" class="circle">
+          <span class="title">Martin</span>
+          <p>I'd like to learn more about your culture since I'm planning to go there for vacations.
+            <br> 08:00 pm
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">check</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../assets/images/mery.jpg" alt="" class="circle">
+          <span class="title">Mery</span>
+          <p>Hi! How are your classes going? Did you submit your final project?
+            <br> 09:00 pm
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">check</i>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- PROFILE -->
+    <section id="profile">
+      <div id="test4" class="col s12">
+        <div id="main">
+          <!-- portada -->
+          <div id="content">
+            <div id="profile-page" class="">
+              <div id="profile-page-header" class="container-flex-column col s12">
+                <div class="back-header">
+                  <figure class="card-profile-image" id="user-photo">
+                  </figure>
+                </div>
+      
+                <div class="row">
+                  <div class="col s12">
+                    <div class="col s6 m3">
+                      <br>
+                      <span id="name" class="card-title grey-text text-darken-4"></span>
+                    </div>
+                    <div class="col s6 m3 center-align">
+                      <h4 class="card-title grey-text text-darken-4">10+</h4>
+                      <p class="medium-small grey-text">Work Experience</p>
+                    </div>
+                    <div class="col s6 m3 center-align">
+                      <h4 class="card-title grey-text text-darken-4">6</h4>
+                      <p class="medium-small grey-text">Completed Projects</p>
+                    </div>
+                    <div class="col s6 m3 center-align">
+                      <h4 class=" card-title grey-text text-darken-4">
+                        <i class="material-icons">person</i>
+                      </h4>
+                      <p class="medium-small grey-text">150+ friends</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ profile-page-header -->
+      
+              <!-- profile-page-content -->
+              <div id="profile-page-content" class="row">
+                <!-- profile-page-sidebar-->
+                <div id="profile-page-sidebar" class="col s12 m4">
+                  <!-- Profile About  -->
+                  <div class="card light-blue">
+                    <div class="card-content white-text">
+                      <span class="card-title">About Me!</span>
+                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                        little markup to use effectively.</p>
+                    </div>
+                  </div>
+                  <!-- Profile About  -->
+      
+                  <!-- Profile About Details  -->
+                  <ul id="profile-page-about-details" class="collection z-depth-1">
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1">
+                          <i class="mdi-action-wallet-travel"></i> Project</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">ABC Name</div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1">
+                          <i class="mdi-social-poll"></i> Skills</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">HTML, CSS</div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1">
+                          <i class="mdi-social-domain"></i> Lives in</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">NY, USA</div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s5 grey-text darken-1">
+                          <i class="mdi-social-cake"></i> Birth date</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">18th June, 1991</div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!--/ Profile About Details  -->
+      
+                  <!-- Profile About  -->
+                  <div class="card amber darken-2">
+                    <div class="card-content white-text center-align">
+                      <p class="card-title">
+                        <i class="mdi-social-group-add"></i> 3685</p>
+                      <p>Followers</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- profile-page-wall -->
+                <div id="user-wall" class="col s12 m8">
+                  <!-- profile-page-wall-share -->
+                  <div id="user-share" class="row">
+                    <div class="col s12">
+                      <div class="tabs z-depth-1 light-blue">
+                        <li class="tab col s3">
+                          <a class="white-text waves-effect waves-light active" href="#UpdateStatus">
+                            <i class="mdi-editor-border-color"></i> Update Status</a>
+                        </li>
+                      </div>
+                      <!-- UpdateStatus-->
+                      <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+                        <div class="row">
+                          <div class="col s2 user-pic">
+                            <!-- <img src="" alt="" class="circle responsive-img valign image-post"> -->
+                          </div>
+                          <div class="input-field col s10">
+                            <input placeholder="¿Qué quieres compartir?" type="text" class=" validate text-post">
+                            <label for="post"></label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="file-field input-field col s12 m6">
+                            <label> Sube una foto </label>
+                            <span>
+                              <a href="#" class="material-icons camera">camera_alt</a>
+                            </span>
+                            <input type="file" accept="image/*" class="select-img">
+                          </div>
+                          <!-- <div class = "file-path-wrapper">
+                          <input class = "file-path validate img-info" type = "text" placeholder = "Upload file"/>
+                        </div> -->
+                          <div class="col s12 m6 right-align">
+                            <a class="waves-effect waves-light btn btn-submit" disabled>Publicar</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="content">
+                </div> -->
+                  <!-- post page wall -->
+                  <div id="mypost">
+                    <div class="by-user">
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="card hide">
+                            <div class="card-profile-title">
+                              <div class="row">
+                                <div class="col s1 user-pic-small">
+                                </div>
+                                <div class="col s10 user-name">
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col s12 post-real">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-image profile-medium">
+                            </div>
+                            <div class="card-content">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- post by default -->
+                  <div id="profile-page-wall-posts" class="row">
+                    <div class="col s12">
+                      <!-- medium -->
+                      <div id="profile-page-wall-post" class="card">
+                        <div class="card-profile-title">
+                          <div class="row">
+                            <div class="col s1 user-post">
+                            </div>
+                            <div class="col s10 user-name">
+                              <!-- <p class="grey-text text-darken-4 user-name ">John Doe</p> -->
+                              <!-- <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  26 Jun 2015</span> -->
+                            </div>
+                            <div class="col s1 right-align">
+                              <i class="mdi-navigation-expand-more"></i>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col s12">
+                              <p>I am a very simple wall post. I am good at containing
+                                <a href="#">#small</a> bits of
+                                <a href="#">#information</a>. I require little more information to use effectively.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-image profile-medium">
+                          <img src="images/gallary/2.jpg" alt="sample" class="responsive-img profile-post-default ">
+                          <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+                            require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action row">
+                          <div class="col s4 card-action-share">
+                            <a href="#">Like</a>
+                            <a href="#">Share</a>
+                          </div>
+      
+                          <div class="input-field col s8 margin">
+                            <input id="profile-comments" type="text" class="validate margin">
+                            <label for="profile-comments" class="">Comments</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <!-- profile-page-wall-posts -->
+        </div>
+      </div>
+      <!-- Content -->
+      <!-- <div id="content" class="content data-form">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <div class="photo container-flex-row">
+                <img src="../assets/images/user.svg" alt="Foto">
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col s12 center-align">
+              <a class="waves-effect waves-light btn">
+                <i class="fa fa-camera white-text" aria-hidden="true"></i> + Profile picture</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col offset-s1 s10">
+              <div class="biography">
+                <div class="input-field">
+                  <textarea id="textarea1" class="materialize-textarea" data-length="150" maxlength="150" placeholder="Soy... Quiero aprender..."></textarea>
+                  <label for="textarea1">Sobre mí</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col offset-s1 s10">
+                <div class="information">
+                  <div class="sex">
+                    <div class="input-field">
+                      <select>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                      </select>
+                      <label>Sexo</label>
+                    </div>
+                  </div>
+                  <div class="birthday">
+                    <div class="input-field">
+                      <input placeholder="dd/mm/aaaa" id="birthday" type="text" class="validate">
+                      <label>Cumpleaños</label>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col offset-s1 s10">
+              <div class="language">
+                <div id="language1">
+                  <div class="input-field">
+                    <select>
+                      <option value="" disabled selected>Elige tu idioma nativo</option>
+                      <option value="1">Español</option>
+                      <option value="2">Inglés</option>
+                    </select>
+                    <label>Mi idioma nativo</label>
+                  </div>
+                </div>
+                <div id="language2">
+                  <div class="input-field">
+                    <select>
+                      <option value="" disabled selected>Elige el idioma a aprender</option>
+                      <option value="1">Francés</option>
+                      <option value="2">Italiano</option>
+                    </select>
+                    <label>Quiero aprender</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+      Contenido post que hizo el usuario en newsfeed
       <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="photo container-flex-row">
-              <img src="../assets/images/user.svg" alt="Foto">
-            </div>
-          </div>
+        <div class="info">
         </div>
-        
-        <div class="row">
-          <div class="col s12 center-align">
-            <a class="waves-effect waves-light btn">
-              <i class="fa fa-camera white-text" aria-hidden="true"></i> + Profile picture</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col offset-s1 s10">
-            <div class="biography">
-              <div class="input-field">
-                <textarea id="textarea1" class="materialize-textarea" data-length="150" maxlength="150" placeholder="Soy... Quiero aprender..."></textarea>
-                <label for="textarea1">Sobre mí</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="row">
-          <div class="col offset-s1 s10">
-            <div class="information">
-              <div class="sex">
-                <div class="input-field">
-                  <select>
-                    <option value="" disabled selected>Elige una opción</option>
-                    <option value="1">Femenino</option>
-                    <option value="2">Masculino</option>
-                  </select>
-                  <label>Sexo</label>
-                </div>
-              </div>
-              <div class="birthday">
-                <div class="input-field">
-                  <input placeholder="dd/mm/aaaa" id="birthday" type="text" class="validate">
-                  <label>Cumpleaños</label>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div> -->
-        <div class="row">
-          <div class="col offset-s1 s10">
-            <div class="language">
-              <div id="language1">
-                <div class="input-field">
-                  <select>
-                    <option value="" disabled selected>Elige tu idioma nativo</option>
-                    <option value="1">Español</option>
-                    <option value="2">Inglés</option>
-                  </select>
-                  <label>Mi idioma nativo</label>
-                </div>
-              </div>
-              <div id="language2">
-                <div class="input-field">
-                  <select>
-                    <option value="" disabled selected>Elige el idioma a aprender</option>
-                    <option value="1">Francés</option>
-                    <option value="2">Italiano</option>
-                  </select>
-                  <label>Quiero aprender</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-    <!-- Contenido post que hizo el usuario en newsfeed-->
-    <div class="container">
-      <div class="info">
-      </div>
-    </div>
-  </section>
-
+      </div> -->
+    </section>
+  </main>
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -276,6 +491,7 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Seguir</a>
     </div>
   </div>
+  <!-- SCRIPTS -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>

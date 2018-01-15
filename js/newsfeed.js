@@ -1,6 +1,7 @@
 $(document).ready(function() {
+  console.log(localStorage.name);
   // Inicializando componentes de materialize
-  $(".button-collapse").sideNav();
+  $('.button-collapse').sideNav();
 
   var $write = $('#write');
   var $textarea = $('.text-post');

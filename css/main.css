@@ -4,75 +4,10 @@
   box-sizing: border-box;
 }
 
-/* splash - login */
-.opacity {
-  background: rgba(3, 3, 3, 0.1);
-  height: 100vh;
-  width: 100vw;
-}
-
-#welcome {
-  font-size: 2.5em;  
-  font-weight: bold;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.44);
-}
-
-.speak {
-  font-family: 'Lalezar', cursive;
-  font-size: 7em;
-  line-height: 90%;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.44);
-}
-
-.bg-city {
-  background-image: url('../assets/images/giphy.gif');  
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position:center center;
-}
-
 .vh100 {
   height: 100vh;
 }
-
-.vh10 {
-  height: 10vh;
-}
-
-.c-white {
-  color: #fff;
-}
-
-.flex {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.item-flex{
-	display: flex;
-  align-items: center;
-  
-}
-
-.m-top15 {
-	margin-top: 15vh;
-}
-
-.vw100{
-  width: 100vw;
-}
-
 /*clases para login.html*/
-
-.font-1 {
-  font-family: 'Passion One', cursive;  
-}
-
-.m-top8 {
-  margin-top: 8vh;
-}
 
 .navbar-high {
   top: 0;
@@ -101,56 +36,7 @@
   width: 13vw;
 }
 
-.bg-books {
-  background-image: url('../assets/images/books.svg');
-  background-position: left left;
-}
-
-.bg-img {
-  background-repeat: no-repeat;
-  height: 23vh;
-  width: 23vh;
-  background-size: cover;
-  display: inline-block
-}
-
-.bg-world {
-  background-image: url('../assets/images/world.svg');
-  background-position: right right;
-}
-
-.bg-pc {
-  background-image: url('../assets/images/pcwithmes.svg');
-  background-position: left left;
-}
-
-.bg-phone {
-  background-image: url('../assets/images/mobilecontac.svg');
-  background-position: right right;
-}
-
-.bg-ubication {
-  background-image: url('../assets/images/worldubication.svg');
-  background-position: left left;
-}
-
-.bg-people {
-  background-image: url('../assets/images/equipo.svg');
-  background-position: right right;
-}
-
-.user {
-  height: 11vh;
-  width: 20vh;
-}
-
 /* Newsfeed - Profile */
-
-.container-flex-row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
 .jc-between {
   justify-content: space-between;
@@ -231,4 +117,176 @@ hr {
 
 .icon-style {
   padding-top: .6em;
+}
+
+/* INDEX */
+
+.fixed-down {
+  position: relative;
+  top: 75%;
+  z-index: 1000;
+}
+
+.slider .indicators .indicator-item {
+  background-color: transparent;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: transparent;
+}
+
+/*clases para login.html*/
+.font-1 {
+  font-family: 'Passion One', cursive;  
+}
+.m-top8{
+  margin-top: 8vh;
+}
+.navbar-high {
+  top: 0;
+  position: fixed;
+  z-index: 997;
+  font-family: 'Passion One', cursive;  
+  font-size: 3em;
+}
+
+.m-top15 {
+  margin-top: 15vh;
+}
+.m-top5 {
+  margin-top: 5vh;
+}
+#team {
+  height: 13vh;
+  width: 13vw;
+}
+
+.user{
+  height: 11vh;
+  width: 20vh;
+}
+/* Newsfeed - Profile */
+
+.navbar-down .material-icons {
+  font-size: 2em;
+}
+
+.photo {
+  background-color: #F6F6F6;
+  height: 30vh;
+}
+
+.photo img {
+  width: 30%;
+  border-radius: 100%;
+}
+
+.space {
+  margin: 0.5em;
+}
+
+.content {
+  margin-bottom: 5em;
+}
+.border{
+  border: 1px solid #BEBEBE;
+  border-radius: 5px;
+  padding: .5em .7em;
+  margin-bottom: .8em;
+}
+.carousel {
+  margin-top: 15vh;
+}
+
+#team {
+  height: 13vh;
+  width: 13vw;
+}
+
+/* navbar down */
+
+.navbar-down {
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.left {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.collection {
+  margin-bottom: 3em;
+}
+
+.icon-style {
+  padding-top: .6em;
+}
+
+/*new*/
+#logo {
+  height: 12vh;
+}
+
+.vw100{
+  width: 100vw;
+}
+
+.f-size20 {
+  font-size: 2em;
+}
+
+/*full view*/
+.navbar-high {
+  top: 0;
+  position: fixed;
+  z-index: 997;
+  font-family: 'Passion One', cursive;  
+  font-size: 3em;
+}
+
+.item-flex{
+	display: flex;
+	align-self: center;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.m-top4 {
+  margin-top: 4vh;
+}
+#nav-logo {
+  height: 11vh;  
+}
+@media (min-width: 728px) {
+  #logo {
+    height: 16vh;
+  }
+  .btn-down {
+    top: 5vh; 
+  }
+@media (min-width: 768px) {
+  #logo {
+    height: 21vh;
+  }
+  .btn-down {
+    top: 5vh; 
+  }
+  #nav-logo {
+    height: 22vh;  
+  }
+@media (min-width: 992px) {
+  #logo {
+    height: 24vh;
+  }
+  .btn-down {
+    top: 8vh; 
+  }
+  #nav-logo {
+    height: 12vh;  
+  }
+  .navbar-down {
+    display: none;
+  }
 }
