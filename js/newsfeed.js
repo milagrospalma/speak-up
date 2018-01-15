@@ -1,45 +1,41 @@
 $(document).ready(function() {
-  // Inicializando componentes de materialize
   $(".button-collapse").sideNav();
+  $('#name').append('<h4>' + localStorage.name + '</h4>');
+  $('#user-photo').append("<img src='"+ localStorage.foto +"' '+ class= 'circle z-depth-2 responsive-img' alt='profile image' width = '115px' + />");
+  $('.user-pic').append("<img src='"+ localStorage.foto +"' '+ class= 'circle responsive-img valign small-pic' + />");
+  $('.user-post').append("<img src='"+ localStorage.foto +"' '+ class= 'circle responsive-img valign small-pic' + />");
+  $('.user-name').append('<p class="grey-text text-darken-4 user-name ">' + localStorage.name +'</p>');
+   
 
-  var $write = $('#write');
-  var $textarea = $('.text-post');
-  var content = $('.content');
-  // var date = moment().format('L');
+  var textarea = $('.text-post');
+  var content = $('#mypost');
+  var input = $('.text-post');
+  var time = moment().format('LT');
   var select = $('.select-img');
   var image;
 
   $('.info').append(localStorage.post);
 
-  // event to write a post
-  $write.on('click', function(e) { 
-    $('#post-box').toggleClass('hide');
-    $('#upload').toggleClass('hide');
-  });
-
   // event to activate the buttton
-  $textarea.on('input', function(event) {
-    if ($(this).val().length > 0) {
-      $('#send').attr('disabled', false);
+  textarea.on('input', function(event) {
+    if (textarea.val().length > 0) {
+      $('.btn').attr('disabled', false);
     } else {
-      $('#send').attr('disabled', true);
+      $('.btn').attr('disabled', true);
     }
   });
 
   // submitting a post
-  $('#send').on('click', function(e) {
+  $('.btn-submit').on('click', function(e) {
     event.preventDefault(e);
-    var time = moment().format('LT');
-    var info = $textarea.val();
-    content.prepend('<div id="post" class="border z-depth-2">' + info + '<div class = "center-align"> <img src="" id="picture" alt="" class="hide" width= 220px;></div><div class= "right-align">' + time + '</div> </div>');
-    $textarea.val('');
-    $('.img-info').val('');
-    $('#picture').prepend('#post');        
-    $('#picture').attr('src', image);
-    $('#picture').removeClass('hide');
-    image = '';
+    var info = textarea.val();
+    content.prepend('<div class="row"><div class="col s12"><div class="card"><div class="card-profile-title"><div class="row"><div class="col s1 user-pic-small"><img src="'+ localStorage.foto +'" class="circle responsive-img valign small-pic"/></div><div class="col s10 user-name"><p class="grey-text text-darken-4 margin"> '+ localStorage.name +'</p></div></div><div class="row"><div class="col s12 post-real"><p>'+ info +'</p></div></div></div><div class="card-image"><img src="" class="responsive-img profile-post-image hide" id="picture-upload"></div><div class="card-content"></div></div></div></div>');
+    textarea.val('');         
+    $('#picture-upload').attr('src', image);
+    $('#picture-upload').removeClass('hide');
+    image = ''; 
     localStorage.post = content.html();
-    $('#send').attr('disabled', true);     
+    $('.btn-submit').attr('disabled', true);
   });
 
   // event to select an image  
@@ -48,11 +44,9 @@ $(document).ready(function() {
       var reader = new FileReader();
       reader.onload = function(e) {
         image = e.target.result;   
-        $('#send').attr('disabled', false);     
+        $('.btn-submit').attr('disabled', false);     
       };
       reader.readAsDataURL(this.files[0]);
     }
   });
-  $('#profile').append('<h3>' + localStorage.name + '</h3>');
-  $('#profile').append('<img src="' + localStorage.photo + '">');
 });
