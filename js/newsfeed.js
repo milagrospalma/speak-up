@@ -54,6 +54,4 @@ $(document).ready(function() {
       reader.readAsDataURL(this.files[0]);
     }
   });
-  $('#profile').append('<h3>' + localStorage.name + '</h3>');
-  $('#profile').append('<img src="' + localStorage.photo + '">');
 });

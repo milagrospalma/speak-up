@@ -259,6 +259,37 @@ hr {
 #nav-logo {
   height: 11vh;  
 }
+
+/* PERFIL */
+.tabs {
+  background-color: transparent;
+}
+.padding {
+  padding-top: .5em;
+}
+.back-header {
+  height: 40vh;
+  /* padding-top:5em; */
+  background-image: url("../assets/images/nodame.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: .5em;
+  /* max-width: 100%; */
+}
+
+#user-photo{
+  align-self: flex-end;
+  margin-bottom: -2.8em;
+  margin-left: 1.7em;
+}
+
+.small-pic{
+  width: 62px;
+  margin-top: 2em;
+}
+
 @media (min-width: 728px) {
   #logo {
     height: 16vh;

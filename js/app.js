@@ -35,17 +35,22 @@ $(document).ready(function() {
       // Guardando en el localstorage
       window.localStorage.setItem('name', result.user.displayName);
       var name = window.localStorage.getItem('name');
-      window.localStorage.setItem('photo', result.user.photoURL);
-      var img = window.localStorage.getItem('photo');
+      // window.localStorage.setItem('photo', result.user.photoURL);
+      // var img = window.localStorage.getItem('photo');
+
+      window.localStorage.setItem('foto', result.user.photoURL);
+      var photo = window.localStorage.getItem('foto');
       window.location.href = 'views/speakup.html';
     });
   });
+
+  var info;
+  var picture;
+  function nueva(result) {
+    save(result.user);
+    info = $('#name').append('<h3>' + name + '</h3>');
+    picture = $('#root').append("<img src='" + result.user.photoURL + "' />");
+    console.log(result.user.displayName);
+  };
 });
 
-
-// Leyendo de la BD
-// firebase.database().ref('telmex').on('child_added', function (event) {
-//   var eventValue = event.val();
-//   console.log(eventValue);
-//   $('#root').append('<img src="' + eventValue.photo + '"/>');
-// });
